@@ -17,7 +17,7 @@ a:hover {
 }
 
 body{
-    font-family: playfair display';
+    font-family: 'playfair display';
     color:black;
     font-size:20pt;
     line-height:1.5em;
@@ -26,6 +26,7 @@ body{
     height:100%;
     /*background: #212124; */
     background-image: url("../img/backgroundpattern.png");
+    background-size: 100%;
 }
 
 div.undercut {
