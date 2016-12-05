@@ -1,0 +1,249 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+/* line 6, _reset.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+/* line 27, _reset.scss */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+/* line 31, _reset.scss */
+body {
+  line-height: 1; }
+
+/* line 34, _reset.scss */
+ol, ul {
+  list-style: none; }
+
+/* line 37, _reset.scss */
+blockquote, q {
+  quotes: none; }
+
+/* line 40, _reset.scss */
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+/* line 45, _reset.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* line 5, site.css.scss */
+a {
+  color: inherit; }
+
+/* line 7, site.css.scss */
+.clear {
+  clear: both; }
+
+/* line 9, site.css.scss */
+html {
+  font-size: 62.5%; }
+
+/* line 13, site.css.scss */
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1.8em;
+  line-height: 27px;
+  color: #333;
+  padding: 60px; }
+
+/* line 21, site.css.scss */
+section {
+  padding: 30px 0;
+  background: white; }
+
+/* line 26, site.css.scss */
+footer {
+  clear: both;
+  padding: 30px 0;
+  color: #999; }
+  /* line 31, site.css.scss */
+  footer .twitter {
+    float: right; }
+
+/* line 36, site.css.scss */
+img {
+  width: 32px;
+  height: 32px; }
+
+/* line 41, site.css.scss */
+.container {
+  max-width: 960px;
+  margin: 0 auto; }
+
+/* line 46, site.css.scss */
+.amp {
+  font-family: Baskerville;
+  font-style: italic;
+  font-weight: normal; }
+
+/* line 48, site.css.scss */
+h1 {
+  margin: 0;
+  font-size: 2.2em;
+  line-height: 32px; }
+
+/* line 54, site.css.scss */
+h3 {
+  font-size: 5em;
+  line-height: 100%;
+  height: 100px;
+  font-weight: bold; }
+  /* line 60, site.css.scss */
+  h3.past {
+    text-decoration: line-through; }
+
+/* line 65, site.css.scss */
+.pinterest {
+  text-decoration: none;
+  color: #cb2027; }
+
+/* line 70, site.css.scss */
+.collectivehealth {
+  color: white;
+  background-size: 50% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; }
+
+/* line 78, site.css.scss */
+.rocketfuel {
+  color: #990000 !important;
+  text-decoration: none;
+  border-bottom: #fc0 12px solid; }
+
+/* line 84, site.css.scss */
+.mozilla {
+  color: white;
+  background-position: 0 -25px;
+  background-size: cover;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; }
+
+/* line 93, site.css.scss */
+.ghanaian {
+  color: white;
+  background: black; }
+  /* line 97, site.css.scss */
+  .ghanaian:before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: black;
+    cursor: none !important; }
+  /* line 108, site.css.scss */
+  .ghanaian:after {
+    content: 'Ghanaian.';
+    position: absolute;
+    left: 0; }
+
+/* line 115, site.css.scss */
+.arsenal {
+  color: white;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; }
+
+/* line 122, site.css.scss */
+li {
+  float: left;
+  clear: left; }
+  /* line 126, site.css.scss */
+  li .hidden {
+    display: none; }
+  /* line 131, site.css.scss */
+  li:hover h3 {
+    pointer-events: none;
+    opacity: 0; }
+  /* line 136, site.css.scss */
+  li:hover .hidden {
+    opacity: 1;
+    display: block;
+    position: absolute; }
+
+@media (max-width: 1400px) {
+  /* line 145, site.css.scss */
+  .container {
+    max-width: 600px; }
+
+  /* line 149, site.css.scss */
+  body {
+    padding: 40px; }
+
+  /* line 153, site.css.scss */
+  footer {
+    padding: 20px 0; }
+
+  /* line 157, site.css.scss */
+  h1 {
+    font-size: 2em; }
+
+  /* line 161, site.css.scss */
+  h3 {
+    font-size: 3.5em;
+    height: 70px; } }
+@media (max-width: 840px) {
+  /* line 168, site.css.scss */
+  body {
+    padding: 30px; }
+
+  /* line 172, site.css.scss */
+  section {
+    padding: 0; }
+
+  /* line 176, site.css.scss */
+  h1 {
+    font-size: 1.1em; }
+
+  /* line 180, site.css.scss */
+  h3 {
+    font-size: 2em;
+    height: 40px; }
+
+  /* line 186, site.css.scss */
+  li h3 {
+    pointer-events: none;
+    opacity: 0; }
+  /* line 191, site.css.scss */
+  li .hidden {
+    opacity: 1;
+    display: block;
+    position: absolute; }
+
+  /* line 198, site.css.scss */
+  .usc {
+    border-bottom-width: 4px; }
+
+  /* line 202, site.css.scss */
+  .ghanaian:before {
+    opacity: 0; }
+
+  /* line 206, site.css.scss */
+  .ghanaian:after {
+    content: "Ghanaian."; } }
