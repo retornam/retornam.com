@@ -29,9 +29,16 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
   display: block; }
 
+@keyFrames fadeBackgroud {
+    0% { background-color: #EC9178; }
+    100% {background-color: #f6e8e5; }
+}
+
 /* line 31, _reset.scss */
 body {
-  line-height: 1; }
+  line-height: 1;
+  background-color:#f6e8e5;
+  animation: fadeBackground 30s; }
 
 /* line 34, _reset.scss */
 ol, ul {
@@ -75,13 +82,13 @@ body {
 /* line 21, site.css.scss */
 section {
   padding: 30px 0;
-  background: white; }
+   }
 
 /* line 26, site.css.scss */
 footer {
   clear: both;
   padding: 30px 0;
-  color: #999; }
+  color: #973036; }
   /* line 31, site.css.scss */
   footer .twitter {
     float: right; }
@@ -180,12 +187,15 @@ li {
   /* line 131, site.css.scss */
   li:hover h3 {
     pointer-events: none;
-    opacity: 0; }
+    opacity: 0;
+    touch-action: auto; }
   /* line 136, site.css.scss */
   li:hover .hidden {
     opacity: 1;
     display: block;
-    position: absolute; }
+    position: absolute;
+    touch-action: auto;
+}
 
 @media (max-width: 1400px) {
   /* line 145, site.css.scss */
@@ -194,7 +204,9 @@ li {
 
   /* line 149, site.css.scss */
   body {
-    padding: 40px; }
+    padding: 40px;
+    cursor: pointer;
+    touch-action: auto;}
 
   /* line 153, site.css.scss */
   footer {
