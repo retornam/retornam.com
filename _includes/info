@@ -1,0 +1,24 @@
+<div class="info-container">
+    <div class="info">
+        <div class="name">
+            <span><a href="/">raymond etornam</a></span>
+        </div>
+    </div>
+    <div class="social-links">
+        <div>
+            <span><a href="/archive">Archive</a></span>
+        </div>
+        <div>
+            <span><a href="/bio">Bio</a></span>
+        </div>
+        <div>
+            <span><a href="//github.com/retornam">Github</a></span>
+        </div>
+        <div>
+            <span><a href="//twitter.com/retornam">Twitter</a></span>
+        </div>
+        <div>
+            <span><a href="//www.linkedin.com/in/retornam">LinkedIn</a></span>
+        </div>
+    </div>
+</div>

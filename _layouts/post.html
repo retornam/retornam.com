@@ -1,0 +1,27 @@
+{% include header %}
+{% include bars %}
+{% include info %}
+<br/>
+<div class="container">
+	<div class="main-post">
+		<div class="top-body">
+			<div class="title">
+			<a href="{{ page.url }}"><h1>{{ page.title }}</h1></a>
+			</div>
+			{% if page.meta %}
+			<p class='description'>{{ page.meta }} </p>
+			{% endif %}
+		</div>
+		<hr>
+
+		{% if page.date %}
+		<p class='date'><span class='icon-calendar icon--inline'></span> {{ page.date | date: "%B %e, %Y" }}</p>
+		{% endif %}
+		<div class="content">
+			{{ content }}
+		</div>
+		<br>
+		</p>
+	</div>
+</div>
+{% include footer %}
