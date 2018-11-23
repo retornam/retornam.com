@@ -1,5 +1,5 @@
 {% include header %}
-<body class="post">
+<body>
 	<div class="only-print">
 		<h2>Raymond Etornam</h2>
 		<div style="margin-top:0;">@retornam.com</div>
@@ -15,15 +15,13 @@
 		</div>
 	</div>
 	<div class="pad2y limiter content">
-		<div class="writing nu">
-			{% for post in site.posts %}
-			<div>
-				<a href="{{ post.url }}" title="">{{ post.title }}</a>
-				<div>{{ post.date | date:  "%Y-%m-%d" }}</div>
-			</div>
-			{% endfor %}
-			
+		<div class="body">
+			<div style="padding-top:5px;	">
+			<img src="../assets/img/headshot.png"
+					  align="middle" 
+		              alt="Raymond Etornam">
 		</div>
-		
+		 {{ content }}
+	</div>
 	</div>
 {% include footer %}

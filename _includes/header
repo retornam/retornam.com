@@ -1,23 +1,297 @@
-	<!doctype html>
-<html lang=en class='{{ page.class }}'>
-	<head>
-	<meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-	<meta name="author" content="Raymond Etornam">
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta content="Raymond Etornam" name="author">
 	<meta name="keywords" content="retornam, raymond, raymond etornam, etornam, agbeame">
-	<link rel='stylesheet' href='/assets/css/style.css'>
-
-	<link rel='canonical' href="{{site.production_url}}{{ page.url }}">
-	<link rel='canonical' href="{{site.production_url}}/">
-	<link rel="icon" href="/assets/img/favicon.ico">
-
-	<!-- RSS Feed -->
-	<link rel='alternate' type='application/rss+xml' href='/rss.xml'>
-
-	<title>{% if page.title %} {{ page.title }} {% else %} raymond etornam {% endif %}</title>
-	<script>
-	// Analytics
+	<meta content='#fff' name='theme-color'>
+	<meta content="summary" name="twitter:card">
+	<meta content="@retornam" name="twitter:site">
+	<meta content="The blog, projects and assorted output of Raymond Etornam" name='twitter:description'>
+	<meta content="https://retornam.com/assets/img/favicon.png" name="twitter:image">
+	<meta content="The blog, projects and assorted output of Raymond Etornam" property="description">
+	<meta content="The blog, projects and assorted output of Raymond Etornam" property="og:description">
+	<meta  content="https://retornam.com/assets/img/favicon.png" name="og:image">
+	<meta content='width=device-width, minimum-scale=1' name="viewport">
+	<meta content="retornam.com" property="og:site_name">
+	<meta content="blog" property="og:type">
+	<script type="application/ld+json">
+		{"@context": "http://schema.org", "@type": "CreativeWork", author: "Raymond Etornam Agbeame"}
 	</script>
-	</head>
-	<body>
+	<link rel="alternate" href="https://retornam.com" type="application/rss+xml" title="retornam.com">
+	<link rel="alternate" href="https://retornam.com" type="application/atom+xml" title="retornam.com">
+	<link rel="me" href="https://github.com/retornam">
+	<link rel="me" href="https://twitter.com/retornam">
+	<style>
+		:root {
+		    --mono-font:San Francisco Mono,Monaco,"Consolas","Lucida Console","DejaVu Sans Mono","Bitstream Vera Sans Mono",monospace;
+		    --sans-font:-apple-system,BlinkMacSystemFont,'avenir next',avenir,helvetica,'helvetica neue',ubuntu,roboto,noto,'segoe ui',arial,sans-serif
+		}
+
+		body {
+		    /*color: #111; */
+		    background-color:#f6e8e5;
+		    animation: fadeBackground 30s;
+		    margin: 30px auto;
+		    -webkit-font-smoothing: antialiased;
+		    text-rendering: optimizeLegibility;
+		    line-height: 1.6;
+		    font-size: 1rem;
+		    font-family: var(--sans-font)
+		}
+
+		.only-print {
+		     display: none
+		}
+
+		.body img {
+			max-height:  480px;
+			max-width: 680px;
+		}
+
+		a {
+		    color: #000;
+		    text-decoration-skip-ink: auto;
+		    text-decoration: underline
+		}
+
+		a:visited {
+		    color: #333
+		}
+
+		ul {
+		 margin: 1rem 0
+		 }
+
+		ul ul {
+		     margin: 0
+		 }
+
+		 h1 a {
+		    color: #111
+		}
+
+		em {
+		    font-style: italic
+		}
+
+		h1 {
+		    margin-bottom: .5rem;
+		    line-height: 1.25;
+		    font-weight: 600;
+		    font-size: 32px;
+		    letter-spacing: .004em
+		}
+
+		h2 {
+		    margin-bottom: .5rem;
+		    line-height: 1.25;
+		    font-weight: 600;
+		    font-size: 1.5rem;
+		    letter-spacing: .009em
+		}
+
+		h3 {
+		    margin-bottom: .5rem;
+		    line-height: 1.25;
+		    font-weight: 600;
+		    font-size: 1.25rem;
+		    letter-spacing: .009em
+		}
+
+		h4 {
+		    margin-bottom: .5rem;
+		    line-height: 1.25;
+		    font-weight: 600;
+		    font-size: 1rem
+		}
+
+		h5 {
+		    margin-bottom: .5rem;
+		    line-height: 1.25;
+		    font-weight: 600;
+		    font-size: .875rem
+		}
+
+		::-webkit-details-marker {
+		    display: none
+		}
+
+		.body th {
+		    text-align: left
+		}
+
+		.body th {
+		    padding: .5rem
+		}
+
+		.limiter {
+		    max-width: 640px;
+		    padding-left: 20px;
+		    padding-right: 20px;
+		    margin-left: auto;
+		    margin-right: auto
+		}
+
+		.pad1 {
+		    padding: 10px
+		}
+
+		.pad0x {
+		    padding-left: 0;
+		    padding-right: 0
+		}
+
+		.pad1y {
+		    padding-top: 10px;
+		    padding-bottom: 10px
+		}
+
+		.pad2y {
+		    padding-top: 20px;
+		    padding-bottom: 20px
+		}
+
+		.update {
+		    background: #fffceb;
+		    padding: 1rem 1rem 0 1rem;
+		    border: 1px solid #fbf1a9;
+		    border-radius: 2px
+		}
+
+		.writing>div {
+		    display: grid;
+		    grid-column-gap: 5px;
+		    padding-top: 5px
+		}
+
+		.writing>div {
+		    grid-template-columns: 1fr min-content
+		}
+
+		.writing a {
+		    font-weight: 500;
+		    letter-spacing: -.015em
+		}
+
+		.writing>div div {
+		    white-space: nowrap;
+		    overflow: hidden;
+		    text-overflow: ellipsis
+		}
+
+		.writing>div div:last-child {
+		    padding-right: .25em;
+		    color: #888;
+		    font-size: 90%;
+		    padding-top: 1px;
+		    font-variant-numeric: tabular-nums;
+		    letter-spacing: -.012em
+		}
+
+		.nu a {
+		    text-decoration: none
+		}
+
+		.nu a:hover {
+		    text-decoration: underline
+		}
+
+		.project-box {
+		    display: grid;
+		    grid-template-columns: repeat(3,1fr);
+		    grid-gap: 30px;
+		    padding-top: 5px
+		}
+
+		.project-box a.project {
+		    text-decoration: none;
+		    color: #666
+		}
+
+		.project-box a.project:hover {
+		    color: #000
+		}
+
+		@media screen and (max-width: 480px) {
+		    .project-box {
+		        grid-template-columns:repeat(1,1fr)
+		    }
+		}
+
+		@media screen and (max-width: 640px) {
+		    .limiter {
+		        width:auto
+		    }
+
+		    .project-box {
+		        grid-template-columns: repeat(2,1fr)
+		    }
+		}
+
+		@media screen and (max-width: 1024px) {
+		    .header-wrap {
+		        border-bottom:1px solid #000;
+		        padding-bottom: 20px
+		    }
+		}
+
+		@media screen and (min-width: 1024px) {
+		    .header {
+		        position:absolute;
+		        top: 55px;
+		        right: 50%;
+		        margin-right: 340px!important;
+		        letter-spacing: -.009em
+		    }
+
+		    .content h1:first-child {
+		        margin-top: 0
+		    }
+		}
+
+		@media print {
+		    .no-print {
+		        display: none
+		    }
+
+		    .only-print {
+		        display: block
+		    }
+
+		    body {
+		        margin: 0
+		    }
+
+		    .limiter {
+		        max-width: 100%!important;
+		        margin: 0!important;
+		        padding: 0!important
+		    }
+		}
+
+		.code,li code {
+		    font-family: var(--mono-font)
+		}
+
+		.m {
+		    color: #099
+		}
+
+		.s {
+		    color: #d01040
+		}
+
+		.no {
+		    color: #900
+		}
+
+		.k {
+		    color: teal
+		}
+
+		.s1,.s2 {
+		    color: #d01040
+		}
+	</style>
+</head>

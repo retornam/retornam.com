@@ -1,9 +1,31 @@
-<div class="posts">
-    <div class="section-heading bigger"><span>what I've written recently:</span></div>
-    <div class="posts-list">
-        {% for post in site.posts limit: 5 %}
-        <a class="post-item" href="{{ post.url }}">{{ post.title }}</a>
-        {% endfor %}
-        <a class="post-item" href="archive">{% assign counter = 1 %}{% for item in site.posts %}{% unless item.published == false %}{% assign counter=counter | plus:1 %}{% endunless %}{% endfor %}{{ counter }} More >>></a>
-    </div>
-</div>
+<body>
+	<div class="only-print">
+		<h2>Raymond Etornam</h2>
+		<div style="margin-top:0;">[me]@retornam.com</div>
+	</div>
+	<div class="header-wrap">
+		<div class="header nu limiter no-print">
+			<h1 style="font-size:1rem; margin: 0 0 0.25em 0">Raymond Etornam</h1>
+			<ul style="list-style:none;padding:0; margin: 0;">
+				<li><a href="/">Home</a></li>
+				<li><a href="/archive">Writing</a></li>
+				<li><a href="/about/">About</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="pad2y limiter content">
+		<h1>{{ page.title }}</h1>
+		<div class="body">
+			 {{ content }}
+		</div>
+		<div class="breaker"></div>
+		<div class="pad2y">
+			<p>
+				<postamble datetime="{{ page.date | date: '%B %e, %Y' }}">{{ page.date | date: "%B %e, %Y" }}</postamble>
+				&nbsp; 
+				<a href="https://twitter.com/intent/follow?screen_name=retornam" 
+						rel="nofollow" target="_blank"
+						title="Follow me on Twitter">@retornam</a>
+			</p>
+		</div>
+	</div>
