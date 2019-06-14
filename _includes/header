@@ -24,12 +24,9 @@
 	<link rel="me" href="https://twitter.com/retornam">
 	<style>
 		:root {
-		    --mono-font:San Francisco Mono,Monaco,"Consolas","Lucida Console","DejaVu Sans Mono","Bitstream Vera Sans Mono",monospace;
-		    --sans-font:-apple-system,BlinkMacSystemFont,'avenir next',avenir,helvetica,'helvetica neue',ubuntu,roboto,noto,'segoe ui',arial,sans-serif
-		}
+		    --mono-font:San Francisco Mono,Monaco,"Consolas","Lucida Console","DejaVu Sans Mono","Bitstream Vera Sans Mono",monospace;--sans-font:-apple-system,BlinkMacSystemFont,'avenir next',avenir,helvetica,'helvetica neue',ubuntu,roboto,noto,'segoe ui',arial,sans-serif}
 
 		body {
-		    /*color: #111; */
 		    background-color:#f6e8e5;
 		    animation: fadeBackground 30s;
 		    margin: 30px auto;
@@ -40,13 +37,13 @@
 		    font-family: var(--sans-font)
 		}
 
-		.only-print {
-		     display: none
+		.body img {
+		    max-height:  480px;
+		    max-width: 680px;
 		}
 
-		.body img {
-			max-height:  480px;
-			max-width: 680px;
+		.only-print {
+		    display: none
 		}
 
 		a {
@@ -60,14 +57,18 @@
 		}
 
 		ul {
-		 margin: 1rem 0
-		 }
+		    margin: 1rem 0
+		}
 
 		ul ul {
-		     margin: 0
-		 }
+		    margin: 0
+		}
 
-		 h1 a {
+		.small,small {
+		    font-size: 14px
+		}
+
+		h1 a {
 		    color: #111
 		}
 
@@ -182,9 +183,7 @@
 
 		.writing>div div:last-child {
 		    padding-right: .25em;
-		    color: #888;
-		    font-size: 90%;
-		    padding-top: 1px;
+		    color: #333;
 		    font-variant-numeric: tabular-nums;
 		    letter-spacing: -.012em
 		}
@@ -221,7 +220,7 @@
 
 		@media screen and (max-width: 640px) {
 		    .limiter {
-		        width:auto
+		     width:auto
 		    }
 
 		    .project-box {
@@ -236,7 +235,7 @@
 		    }
 		}
 
-		@media screen and (min-width: 1024px) {
+		@media screen and (min-width: 1025px) {
 		    .header {
 		        position:absolute;
 		        top: 55px;
@@ -270,67 +269,28 @@
 		    }
 		}
 
-		.code,li code,p code,pre code {
-		    font-family: var(--mono-font)
-		}
-
-		p code {
-			font-size: 90%
-		}
-
-		pre code {
-			font-size: .675rem;
-			line-height: 1.5
-		}
-
-		.highlight {
-			overflow-x: auto;
-			padding: 10px 30px;
-			margin: 0;
-			background: #f6e8e5;
-		}
-
-		.highlight {
-			margin: 10px 0
-		}
-		.c,.c1 {
-			color: #998
-		}
-
-		.o {
-			color: #000
-		}
-
-		.kd {
-			color: #458
-		}
-
-		.err {
-			color: #a61717
+		.code,li code {
+		font-family: var(--mono-font)
 		}
 
 		.m {
-			color: #099
+		color: #099
 		}
 
 		.s {
-			color: #d01040
+		color: #d01040
 		}
 
-		.na,.no {
-			color: #900
+		.no {
+		color: #900
 		}
 
 		.k {
-			color: teal
-		}
-
-		.mi {
-			color: #099
+		color: teal
 		}
 
 		.s1,.s2 {
-			color: #d01040
+		color: #d01040
 		}
 	</style>
 </head>
