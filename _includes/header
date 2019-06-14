@@ -270,28 +270,67 @@
 		    }
 		}
 
-		.code,li code {
+		.code,li code,p code,pre code {
 		    font-family: var(--mono-font)
 		}
 
+		p code {
+			font-size: 90%
+		}
+
+		pre code {
+			font-size: .675rem;
+			line-height: 1.5
+		}
+
+		.highlight {
+			overflow-x: auto;
+			padding: 10px 30px;
+			margin: 0;
+			background: #f6e8e5;
+		}
+
+		.highlight {
+			margin: 10px 0
+		}
+		.c,.c1 {
+			color: #998
+		}
+
+		.o {
+			color: #000
+		}
+
+		.kd {
+			color: #458
+		}
+
+		.err {
+			color: #a61717
+		}
+
 		.m {
-		    color: #099
+			color: #099
 		}
 
 		.s {
-		    color: #d01040
+			color: #d01040
 		}
 
-		.no {
-		    color: #900
+		.na,.no {
+			color: #900
 		}
 
 		.k {
-		    color: teal
+			color: teal
+		}
+
+		.mi {
+			color: #099
 		}
 
 		.s1,.s2 {
-		    color: #d01040
+			color: #d01040
 		}
 	</style>
 </head>

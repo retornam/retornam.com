@@ -24,22 +24,3 @@ If you're satifisfied with the output of the dryrun, use
 {% endhighlight %}
 
 to force the removal of  all the files.
-
-
-
-
-
-
-
-
-[tmcw]: https://macwright.org
-
-
-
-
-
-
-
-
-
-
