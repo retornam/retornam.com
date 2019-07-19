@@ -10,7 +10,7 @@ Below are steps to install Python-3.7.4 from source on Debian.
 First install the following packages, these packages are required to
 build Python from source.
 
-```
+~~~
 sudo apt-get update
 sudo apt-get install \
 	 build-essential \
@@ -22,7 +22,7 @@ sudo apt-get install \
 	 libssl-dev \
 	 wget \
 	 curl
-```
+~~~
 
 Download the latest tarball from  the Python [source download page] using curl
 
