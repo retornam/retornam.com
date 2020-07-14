@@ -1,0 +1,19 @@
+{{ define "main"}}
+
+<h1>Posts</h1>
+
+<div class="posts-group">
+<br>
+<br>
+{{.Content}}
+<div class="post-year"></div>
+<ul class="posts-list">
+{{range .Pages}}
+<li class="posts-site">
+	<time>{{ .PublishDate.Format  "Jan 02, 2006" }}</time>
+	<a href="{{.Permalink}}">{{.Title}}</a>
+</li>
+<br>
+{{end}}
+</ul>
+{{ end }}

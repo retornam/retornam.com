@@ -1,0 +1,29 @@
+baseURL = "http://retornam.com"
+languageCode = "en-us"
+title = "retornam.com"
+theme ="cdubs"
+
+
+[params]
+	description = "retornam.com"
+
+
+[permalinks]
+	posts = "/:year/:month/:title"
+
+[taxonomies]
+  category = "categories"
+  tag = "tags"
+
+[markup]
+  [markup.highlight]
+    codeFences = true
+    guessSyntax = false
+    hl_Lines = ""
+    lineNoStart = 1
+    lineNos = false
+    lineNumbersInTable = true
+    noClasses = true
+    style = "monokai"
+    tabWidth = 4
+
