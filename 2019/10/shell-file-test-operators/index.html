@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang= "en-us"><head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta name="description" content="I&rsquo;ve been writing some shell scripts recently and I&rsquo;ve always had to Google which file test operator to use and when to use them. To prevent constant Googling, I&rsquo;m writing these down here for easier reference in the future.
+ ! not -a FILENAME - True if the FILENAME exists, identical to -e but deprecated. Use -e instead. -b FILENAME - True if the FILENAME exists and is a block device. ">
+	<link rel="canonical" href="http://retornam.com/2019/10/shell-file-test-operators/">
+	<meta property="og:title" content="Shell File Test Operators" />
+<meta property="og:description" content="I&rsquo;ve been writing some shell scripts recently and I&rsquo;ve always had to Google which file test operator to use and when to use them. To prevent constant Googling, I&rsquo;m writing these down here for easier reference in the future.
+ ! not -a FILENAME - True if the FILENAME exists, identical to -e but deprecated. Use -e instead. -b FILENAME - True if the FILENAME exists and is a block device." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://retornam.com/2019/10/shell-file-test-operators/" />
+<meta property="article:published_time" content="2019-10-26T10:32:57-07:00" />
+<meta property="article:modified_time" content="2019-10-26T10:32:57-07:00" />
+
+	<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Shell File Test Operators"/>
+<meta name="twitter:description" content="I&rsquo;ve been writing some shell scripts recently and I&rsquo;ve always had to Google which file test operator to use and when to use them. To prevent constant Googling, I&rsquo;m writing these down here for easier reference in the future.
+ ! not -a FILENAME - True if the FILENAME exists, identical to -e but deprecated. Use -e instead. -b FILENAME - True if the FILENAME exists and is a block device."/>
+
+	<link rel="icon" href="/img/favicon.ico">
+	<link rel="stylesheet" type="text/css" href="/css/gruvbox-dark.css">
+	<link rel="stylesheet" type="text/css" href="/css/hack.css">
+	<title>
+		  Shell File Test Operators |   retornam.com
+	</title>
+</head>
+
+
+<body class="snow hack gruvbox-dark">
+    	<div class="container"><header>
+	<p>
+		<a href="/">Raymond Etornam</a>
+		 - 
+		<a href="/posts">Posts</a>
+		 - 
+		<a href="/about">About</a>
+	</p>
+</header><div class="newframe">
+    			<main>
+  <h1> Shell File Test Operators</h1>
+  <p><time> October 26, 2019</time><p>
+ <p>I&rsquo;ve been writing some shell scripts recently and
+I&rsquo;ve always had to Google which file test operator
+to use and when to use them. To prevent constant
+Googling, I&rsquo;m writing these down here for easier
+reference in the future.</p>
+<ul>
+<li><code>!</code>   not</li>
+<li><code>-a</code> <code>FILENAME</code> - True if the FILENAME exists, identical to <code>-e</code> but deprecated. Use <code>-e</code> instead.</li>
+<li><code>-b</code> <code>FILENAME</code> - True if the FILENAME exists and is a block device.</li>
+<li><code>-c</code> <code>FILENAME</code> - True if the FILENAME exists and is a character device.</li>
+<li><code>-d</code> <code>FILENAME</code> - True if the FILENAME exists and is a directory.</li>
+<li><code>-e</code> <code>FILENAME</code> - True if the FILENAME exists and is a file (types like socket, directory dont matter here )</li>
+<li><code>-f</code> <code>FILENAME</code> - True if the FILENAME exists and is a regular file.</li>
+<li><code>-G</code> <code>FILENAME</code> - True if the FILENAME exists and is in the same group as the current user.</li>
+<li><code>-h</code> <code>FILENAME</code> - True if the FILENAME exists and is a symbolic link.</li>
+<li><code>-g</code> <code>FILENAME</code> - True if the FILENAME exists and has set-group-id(sgid) flag set.</li>
+<li><code>-k</code> <code>FILENAME</code> - True if the FILENAME exists and  has a sticky bit flag set.</li>
+<li><code>-L</code> <code>FILENAME</code> - True if the FILENAME exists and is a symbolic link.</li>
+<li><code>-O</code> <code>FILENAME</code> - True if the FILENAME exists and and is owned by the current user.</li>
+<li><code>-N</code> <code>FILENAME</code> - True if the FILENAME has been modified since it was last read.</li>
+<li><code>-p</code> <code>FILENAME</code> - True if the FILENAME exists and is pipe.</li>
+<li><code>-r</code> <code>FILENAME</code> - True if the FILENAME exists and is readable by the current user.</li>
+<li><code>-S</code> <code>FILENAME</code> - True if the FILENAME exists and is a socket file.</li>
+<li><code>-s</code> <code>FILENAME</code> - True if the FILENAME exists and has a nonzero size.</li>
+<li><code>-t</code> <code>FILENAME</code> - True if the FILENAME exists and a file descripter associated with a terminal device.</li>
+<li><code>-u</code> <code>FILENAME</code> - True if the FILENAME exists and the set-user-id (suid) flag is set.</li>
+<li><code>-w</code> <code>FILENAME</code> - True if the FILENAME exists and is writeable.</li>
+<li><code>-x</code> <code>FILENAME</code> - True if the FILENAME exists and is an executable.</li>
+</ul>
+
+
+    			</main>
+    		</div></div>
+        
+    </body>
+</html>

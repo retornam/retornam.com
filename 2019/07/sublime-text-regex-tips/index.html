@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang= "en-us"><head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta name="description" content="I sometimes have to replace the nth character of a large text file with another character, an example being a badly formatted csv file. For example, if I want to replace the 7th character of each line in a file with a comma, using Sublime Text
+Find:	^(.{7})(.) Replace: \1, Remember to enable /Re in the Sublime Find Replace dialog. The same task can be performed with sed
+sed &#39;s/./,/7&#39; filename &gt; newfilename  ">
+	<link rel="canonical" href="http://retornam.com/2019/07/sublime-text-regex-tips/">
+	<meta property="og:title" content="Sublime Text Regex Tips" />
+<meta property="og:description" content="I sometimes have to replace the nth character of a large text file with another character, an example being a badly formatted csv file. For example, if I want to replace the 7th character of each line in a file with a comma, using Sublime Text
+Find:	^(.{7})(.) Replace: \1, Remember to enable /Re in the Sublime Find Replace dialog. The same task can be performed with sed
+sed &#39;s/./,/7&#39; filename &gt; newfilename " />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://retornam.com/2019/07/sublime-text-regex-tips/" />
+<meta property="article:published_time" content="2019-07-19T18:49:03-07:00" />
+<meta property="article:modified_time" content="2019-07-19T18:49:03-07:00" />
+
+	<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Sublime Text Regex Tips"/>
+<meta name="twitter:description" content="I sometimes have to replace the nth character of a large text file with another character, an example being a badly formatted csv file. For example, if I want to replace the 7th character of each line in a file with a comma, using Sublime Text
+Find:	^(.{7})(.) Replace: \1, Remember to enable /Re in the Sublime Find Replace dialog. The same task can be performed with sed
+sed &#39;s/./,/7&#39; filename &gt; newfilename "/>
+
+	<link rel="icon" href="/img/favicon.ico">
+	<link rel="stylesheet" type="text/css" href="/css/gruvbox-dark.css">
+	<link rel="stylesheet" type="text/css" href="/css/hack.css">
+	<title>
+		  Sublime Text Regex Tips |   retornam.com
+	</title>
+</head>
+
+
+<body class="snow hack gruvbox-dark">
+    	<div class="container"><header>
+	<p>
+		<a href="/">Raymond Etornam</a>
+		 - 
+		<a href="/posts">Posts</a>
+		 - 
+		<a href="/about">About</a>
+	</p>
+</header><div class="newframe">
+    			<main>
+  <h1> Sublime Text Regex Tips</h1>
+  <p><time> July 19, 2019</time><p>
+ <p>I sometimes have to replace the nth character of a large text file
+with another character, an example being a badly formatted csv file.
+For example, if I want to replace the 7th character of each line in
+a file with a <strong>comma</strong>, using Sublime Text</p>
+<pre><code>Find:	^(.{7})(.)
+Replace: \1,
+
+Remember to enable /Re in the Sublime Find Replace dialog.
+</code></pre><p>The same task can be performed with sed</p>
+<pre><code>sed 's/./,/7' filename &gt; newfilename
+</code></pre>
+
+    			</main>
+    		</div></div>
+        
+    </body>
+</html>

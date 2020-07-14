@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang= "en-us"><head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta name="description" content="On Linux, the route command shows and manipulates the IP routing table. To view the full route table, use the command route -n.The -n flag according to the man pages:
+show numerical addresses instead of trying to determine symbolic host names. This is useful if you are trying to determine why the route to your nameserver has vanished. In much simpler language, the -n flag resolves IP addresses to their hostnames. ">
+	<link rel="canonical" href="http://retornam.com/2019/11/view-routing-table-on-os-x-and-linux/">
+	<meta property="og:title" content="View Routing Table on OS X and Linux" />
+<meta property="og:description" content="On Linux, the route command shows and manipulates the IP routing table. To view the full route table, use the command route -n.The -n flag according to the man pages:
+show numerical addresses instead of trying to determine symbolic host names. This is useful if you are trying to determine why the route to your nameserver has vanished. In much simpler language, the -n flag resolves IP addresses to their hostnames." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://retornam.com/2019/11/view-routing-table-on-os-x-and-linux/" />
+<meta property="article:published_time" content="2019-11-29T19:18:39-08:00" />
+<meta property="article:modified_time" content="2019-11-29T19:18:39-08:00" />
+
+	<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="View Routing Table on OS X and Linux"/>
+<meta name="twitter:description" content="On Linux, the route command shows and manipulates the IP routing table. To view the full route table, use the command route -n.The -n flag according to the man pages:
+show numerical addresses instead of trying to determine symbolic host names. This is useful if you are trying to determine why the route to your nameserver has vanished. In much simpler language, the -n flag resolves IP addresses to their hostnames."/>
+
+	<link rel="icon" href="/img/favicon.ico">
+	<link rel="stylesheet" type="text/css" href="/css/gruvbox-dark.css">
+	<link rel="stylesheet" type="text/css" href="/css/hack.css">
+	<title>
+		  View Routing Table on OS X and Linux |   retornam.com
+	</title>
+</head>
+
+
+<body class="snow hack gruvbox-dark">
+    	<div class="container"><header>
+	<p>
+		<a href="/">Raymond Etornam</a>
+		 - 
+		<a href="/posts">Posts</a>
+		 - 
+		<a href="/about">About</a>
+	</p>
+</header><div class="newframe">
+    			<main>
+  <h1> View Routing Table on OS X and Linux</h1>
+  <p><time> November 29, 2019</time><p>
+ <p>On Linux, the <strong>route</strong> command shows and manipulates the IP routing
+table. To view the full route table, use the command <strong>route -n</strong>.The <strong>-n</strong> flag
+according to the man pages:</p>
+<pre><code>show numerical addresses instead of trying to determine symbolic
+host names. This is useful if you are trying to determine why the
+route to your nameserver has vanished.
+</code></pre><p>In much simpler language, the <strong>-n</strong> flag resolves IP addresses to their hostnames.</p>
+<p>For example the destination <strong>default</strong> displays <strong>0.0.0.0</strong> if you pass the
+<strong>-n</strong> flag and <strong>default</strong> without it.</p>
+<p>OS X on the other hand has the <strong>route</strong> command but can only manually manipulate
+the routing tables and doesn&rsquo;t show the table like on Linux.For this reason,
+I often use the <strong>netstat</strong> command instead and prefer <strong>netstat -nr</strong></p>
+<p>The <strong>-n</strong> flag on OS X according to the man page:</p>
+<pre><code>shows network addresses as numbers (normally netstat interprets addresses and
+attempts to display them symbolically).  
+This option may be used with any of the display formats
+</code></pre><p>The <strong>r</strong> flag according to the man page:</p>
+<pre><code>show the routing tables.  Use with -a to show protocol-cloned routes.  
+When -s is also present, show routing statistics instead.  
+When -l is also present, netstat assumes more columns are there and the
+maximum transmission unit.  More detailed information about the route metrics 
+are displayed with -ll for TCP round trip times -lll for all metrics.  
+Use the -z flags to display only entries with non-zero RTT values.  (''mtu'') 
+are also displayed.
+</code></pre><p>As always, it is good to spend time reading the man pages to understand the flags
+available for each command and how to use them properly.</p>
+<p>Hope this helps</p>
+
+
+    			</main>
+    		</div></div>
+        
+    </body>
+</html>
