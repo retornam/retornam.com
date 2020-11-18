@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang= "en-us"><head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta name="description" content="Early last week, I broke my five-year rule of not upgrading to a newly released version of macOS until after two minor dot releases for the first time. As with every new operating system upgrade, this new update broke many of the packages I use daily. A major one being pyenv, a tool I use for building and managing various versions of the Python programming language. After upgrading, I tried building Python 3. ">
+	<link rel="canonical" href="http://retornam.com/2020/11/building-python-on-macos-big-sur/">
+	<meta property="og:title" content="Building Python on MacOS Big Sur" />
+<meta property="og:description" content="Early last week, I broke my five-year rule of not upgrading to a newly released version of macOS until after two minor dot releases for the first time. As with every new operating system upgrade, this new update broke many of the packages I use daily. A major one being pyenv, a tool I use for building and managing various versions of the Python programming language. After upgrading, I tried building Python 3." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://retornam.com/2020/11/building-python-on-macos-big-sur/" />
+<meta property="article:published_time" content="2020-11-18T09:06:03-08:00" />
+<meta property="article:modified_time" content="2020-11-18T09:06:03-08:00" />
+
+	<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Building Python on MacOS Big Sur"/>
+<meta name="twitter:description" content="Early last week, I broke my five-year rule of not upgrading to a newly released version of macOS until after two minor dot releases for the first time. As with every new operating system upgrade, this new update broke many of the packages I use daily. A major one being pyenv, a tool I use for building and managing various versions of the Python programming language. After upgrading, I tried building Python 3."/>
+
+	<link rel="icon" href="/img/favicon.ico">
+	<link rel="stylesheet" type="text/css" href="/css/gruvbox-dark.css">
+	<link rel="stylesheet" type="text/css" href="/css/hack.css">
+	<title>
+		  Building Python on MacOS Big Sur |   retornam.com
+	</title>
+</head>
+
+
+<body class="snow hack gruvbox-dark">
+    	<div class="container"><header>
+	<p>
+		<a href="/">Raymond Etornam</a>
+		 - 
+		<a href="/posts">Posts</a>
+		 - 
+		<a href="/about">About</a>
+	</p>
+</header><div class="newframe">
+    			<main>
+  <h1> Building Python on MacOS Big Sur</h1>
+  <p><time> November 18, 2020</time><p>
+ <p>Early last week, I broke my five-year rule of not upgrading to a newly released version of macOS until after two minor dot releases for the first time. As with every new operating system upgrade, this new update broke many of the packages I use daily. A major one being pyenv, a tool I use for building and managing various versions of the Python programming language. After upgrading, I tried building Python 3.8.6 with pyenv only to receive the following error messages.</p>
+<pre><code>➜ pyenv install 3.8.6
+python-build: use openssl@1.1 from homebrew
+python-build: use readline from homebrew
+Downloading Python-3.8.6.tar.xz...
+-&gt; https://www.python.org/ftp/python/3.8.6/Python-3.8.6.tar.xz
+Installing Python-3.8.6...
+python-build: use readline from homebrew
+
+import pip._internal
+  File &quot;&lt;frozen zipimport&gt;&quot;, line 241, in load_module
+  File &quot;&lt;frozen zipimport&gt;&quot;, line 709, in _get_module_code
+  File &quot;&lt;frozen zipimport&gt;&quot;, line 570, in _get_data
+BUILD FAILED (OS X 11.0.1 using python-build 20180424)
+zipimport.ZipImportError: can't decompress data; zlib not available
+</code></pre><p>Even though I had updated to the latest versions of both XCode and XCode command-line tools, pyenv&rsquo;s python-build process was unable to locate the header files for zlib.</p>
+<p>Next, I tried exporting the path to the header files using the CFLAGS and LDFLAGS environment variables</p>
+<pre><code>➜ CFLAGS=&quot;-I$(xcrun --show-sdk-path)/usr/include&quot; LDFLAGS=&quot; -L$(xcrun --show-sdk-path)/usr/lib&quot; pyenv install 3.8.6
+python-build: use openssl@1.1 from homebrew
+python-build: use readline from homebrew
+Downloading Python-3.8.6.tar.xz...
+-&gt; https://www.python.org/ftp/python/3.8.6/Python-3.8.6.tar.xz
+Installing Python-3.8.6...
+python-build: use readline from homebrew
+python-build: use zlib from xcode sdk
+
+
+import pip._internal
+  File &quot;&lt;frozen zipimport&gt;&quot;, line 241, in load_module
+  File &quot;&lt;frozen zipimport&gt;&quot;, line 709, in _get_module_code
+  File &quot;&lt;frozen zipimport&gt;&quot;, line 570, in _get_data
+BUILD FAILED (OS X 11.0.1 using python-build 20180424)
+zipimport.ZipImportError: can't decompress data; zlib not available
+</code></pre><p>Even with the added exports, the build was unable to locate zlib files. I decided to skip using the zlib files provided
+by XCode next, by installing zlib using Homebew and then exporting the new
+path to LDFLAGS, CFLAGS, and CPPFLAGS before issuing the build command.</p>
+<p>If this is your first time using <a href="https://brew.sh">Homebrew</a>, follow the prompts to install openssl, sqlite, readline, bzip2, and zlib as kegs. Do not link the packages to your /usr/local or /usr/local/opt directories as this could cause potential
+issues in the future.</p>
+<pre><code>➜ brew install openssl sqlite readline bzip2 zlib
+</code></pre><p>After the above command exits successfully, execute the following command to build Python with pyenv.</p>
+<pre><code>➜ CFLAGS=&quot;-I$(brew --prefix openssl)/include -I$(brew --prefix bzip2)/include -I$(brew --prefix readline)/include -I$(xcrun --show-sdk-path)/usr/include&quot; LDFLAGS=&quot;-L$(brew --prefix openssl)/lib -L$(brew --prefix readline)/lib -L$(brew --prefix zlib)/lib -L$(brew --prefix bzip2)/lib&quot; CPPFLAGS=&quot;-I/usr/local/opt/bzip2/include&quot; pyenv install 3.8.6
+</code></pre>
+
+    			</main>
+    		</div></div>
+        
+    </body>
+</html>

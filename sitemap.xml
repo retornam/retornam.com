@@ -3,6 +3,16 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://retornam.com/2020/11/building-python-on-macos-big-sur/</loc>
+    <lastmod>2020-11-18T09:06:03-08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://retornam.com/posts/</loc>
+    <lastmod>2020-11-18T09:06:03-08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://retornam.com/</loc>
     <lastmod>2020-07-09T13:19:15-07:00</lastmod>
   </url>
@@ -10,11 +20,6 @@
   <url>
     <loc>http://retornam.com/about/</loc>
     <lastmod>2020-07-09T13:19:15-07:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://retornam.com/posts/</loc>
-    <lastmod>2020-07-07T17:49:13-07:00</lastmod>
   </url>
   
   <url>
