@@ -1,7 +1,7 @@
 baseURL = "http://retornam.com/"
 languageCode = "en-us"
 title = "Raymond Etornam"
-theme ="archie"
+theme ="cdubs"
 Copyright = "retornam.com"
 # Code Highlight
 pygmentsstyle = "monokai"
@@ -49,4 +49,7 @@ paginate=10 # articles per page
     noClasses = true
     style = "monokai"
     tabWidth = 4
+
+[author]
+  name = "retornam"
 
