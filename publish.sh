@@ -21,8 +21,10 @@ rm -rf public/*
 echo "Generating site"
 hugo
 
+THEDATE=$(date +"%H:%M:%S %p on %m-%d-%Y")
+
 echo "Updating gh-pages branch"
-cd public && git add --all && git commit -m "Publishing to gh-pages (publish.sh)"
+cd public && git add --all && git commit -m "Publishing to gh-pages (publish.sh) on ${THEDATE}"
 
 #echo "Pushing to github"
 #git push --all

@@ -1,15 +1,38 @@
 baseURL = "http://retornam.com"
 languageCode = "en-us"
-title = "retornam.com"
-theme ="cdubs"
+title = "Raymond Etornam"
+theme ="archie"
+Copyright = "retornam.com"
+# Code Highlight
+pygmentsstyle = "monokai"
+pygmentscodefences = true
+pygmentscodefencesguesssyntax = true
+paginate=10 # articles per page
 
+
+[[menu.main]]
+  name = "Archives"
+  url = "/posts"
+  weight = 1
+
+[[menu.main]]
+  name = "About"
+  url = "/about"
+  weight = 2
+
+#[[menu.main]]
+# name = "Tags"
+# url = "/tags"
+# weight = 3
 
 [params]
-	description = "retornam.com"
+  mode="dark" # light,dark,auto when using archie theme
+  useCDN=false # when using archie theme dont use cdn
+  description = "retornam.com"
 
 
 [permalinks]
-	posts = "/:year/:month/:title"
+  posts = "/:year/:month/:title"
 
 [taxonomies]
   category = "categories"
