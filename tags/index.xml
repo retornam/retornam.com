@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on retornam.com</title>
+    <title>Tags on Raymond Etornam</title>
     <link>http://retornam.com/tags/</link>
-    <description>Recent content in Tags on retornam.com</description>
+    <description>Recent content in Tags on Raymond Etornam</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <copyright>retornam.com</copyright>
     <lastBuildDate>Thu, 11 Jul 2019 10:31:49 -0700</lastBuildDate><atom:link href="http://retornam.com/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>python</title>

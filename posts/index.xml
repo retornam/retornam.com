@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on retornam.com</title>
+    <title>Posts on Raymond Etornam</title>
     <link>http://retornam.com/posts/</link>
-    <description>Recent content in Posts on retornam.com</description>
+    <description>Recent content in Posts on Raymond Etornam</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <copyright>retornam.com</copyright>
     <lastBuildDate>Wed, 18 Nov 2020 09:06:03 -0800</lastBuildDate><atom:link href="http://retornam.com/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Building Python on MacOS Big Sur</title>
@@ -65,7 +66,7 @@ I wrote this down to serve as a reminder to myself.</description>
       <guid>http://retornam.com/2019/07/sublime-text-regex-tips/</guid>
       <description>I sometimes have to replace the nth character of a large text file with another character, an example being a badly formatted csv file. For example, if I want to replace the 7th character of each line in a file with a comma, using Sublime Text
 Find:	^(.{7})(.) Replace: \1, Remember to enable /Re in the Sublime Find Replace dialog. The same task can be performed with sed
-sed &#39;s/./,/7&#39; filename &amp;gt; newfilename </description>
+sed &amp;#39;s/./,/7&amp;#39; filename &amp;gt; newfilename </description>
     </item>
     
     <item>
@@ -110,8 +111,8 @@ echo BYPASS_SEQUENCE | base64 --decode </description>
       <guid>http://retornam.com/2019/06/brew-bundle/</guid>
       <description>I recently discovered the brew bundle tap. This tap saves all your installed homebrew packages to a file. This makes it easy to version control your installed packages or make a list easy list of packages to share with others.
 Install the Homebrew bundle tap, to activate the brew bundle command
-	brew tap Homebrew/bundle To dump all your installed packages to a Brewfile run
-	brew bundle dump The dump command creates a Brewfile in the current working directory with all packages installed by Homebrew as entries.</description>
+brew tap Homebrew/bundle To dump all your installed packages to a Brewfile run
+brew bundle dump The dump command creates a Brewfile in the current working directory with all packages installed by Homebrew as entries.</description>
     </item>
     
     <item>
