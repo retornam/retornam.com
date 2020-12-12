@@ -1,7 +1,7 @@
 baseURL = "http://retornam.com/"
 languageCode = "en-us"
 title = "Raymond Etornam"
-theme ="cdubs"
+theme ="archie"
 Copyright = "retornam.com"
 # Code Highlight
 pygmentsstyle = "monokai"
