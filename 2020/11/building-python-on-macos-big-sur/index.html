@@ -1,60 +1,43 @@
 <!DOCTYPE html>
-<html><head>
-	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Building Python on MacOS Big Sur - Raymond Etornam</title><meta name="viewport" content="width=device-width, initial-scale=1">
-
-	<meta property="og:description" content="" />
-	<meta name="twitter:description" content="" />
-	<meta name="description" content="retornam.com" />
-	<meta name="description" content="" />
-
-	<meta property="og:title" content="Building Python on MacOS Big Sur | Raymond Etornam" />
-	<meta name="twitter:title" content="Building Python on MacOS Big Sur | Raymond Etornam" />
-
-	<meta property="og:image" content=""/>
-	<meta itemprop="name" content="Building Python on MacOS Big Sur | Raymond Etornam" />
-	<meta name="application-name" content="Building Python on MacOS Big Sur | Raymond Etornam" />
-	<meta property="og:site_name" content="" />
+<html lang= "en-us"><head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta name="description" content="Early last week, I broke my five-year rule of not upgrading to a newly released version of macOS until after two minor dot releases for the first time. As with every new operating system upgrade, this new update broke many of the packages I use daily. A major one being pyenv, a tool I use for building and managing various versions of the Python programming language. After upgrading, I tried building Python 3. ">
+	<link rel="canonical" href="http://retornam.com/2020/11/building-python-on-macos-big-sur/">
 	<meta property="og:title" content="Building Python on MacOS Big Sur" />
 <meta property="og:description" content="Early last week, I broke my five-year rule of not upgrading to a newly released version of macOS until after two minor dot releases for the first time. As with every new operating system upgrade, this new update broke many of the packages I use daily. A major one being pyenv, a tool I use for building and managing various versions of the Python programming language. After upgrading, I tried building Python 3." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://retornam.com/2020/11/building-python-on-macos-big-sur/" />
 <meta property="article:published_time" content="2020-11-18T09:06:03-08:00" />
 <meta property="article:modified_time" content="2020-11-18T09:06:03-08:00" />
-<meta name="twitter:card" content="summary"/>
+
+	<meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Building Python on MacOS Big Sur"/>
 <meta name="twitter:description" content="Early last week, I broke my five-year rule of not upgrading to a newly released version of macOS until after two minor dot releases for the first time. As with every new operating system upgrade, this new update broke many of the packages I use daily. A major one being pyenv, a tool I use for building and managing various versions of the Python programming language. After upgrading, I tried building Python 3."/>
 
-	<link href="http://retornam.com/css/fonts.css" rel="stylesheet">
-	
-	<link rel="stylesheet" type="text/css" media="screen" href="http://retornam.com/css/main.css" /><link rel="stylesheet" type="text/css" href="http://retornam.com/css/dark.css"  />
-	
-	
+	<link rel="icon" href="/img/favicon.ico">
+	<link rel="stylesheet" type="text/css" href="/css/gruvbox-dark.css">
+	<link rel="stylesheet" type="text/css" href="/css/hack.css">
+	<title>
+		  Building Python on MacOS Big Sur |   Raymond Etornam
+	</title>
 </head>
-<body>
-        <div class="content"><header>
-	<div class="main">
-		<a href="http://retornam.com/">Raymond Etornam</a>
-	</div>
-	<nav>
-		
-		<a href="/posts">Archives</a>
-		
+
+
+<body class="snow hack gruvbox-dark">
+    	<div class="container"><header>
+	<p>
+		<a href="/">Raymond Etornam</a>
+		 - 
+		<a href="/posts">Posts</a>
+		 - 
 		<a href="/about">About</a>
-		
-	</nav>
-</header>
-
-<main>
-	<article>
-		<div class="title">
-			<h1 class="title">Building Python on MacOS Big Sur</h1>
-			<div class="meta">Posted on Nov 18, 2020</div>
-		</div>
-		
-
-		<section class="body">
-			<p>Early last week, I broke my five-year rule of not upgrading to a newly released version of macOS until after two minor dot releases for the first time. As with every new operating system upgrade, this new update broke many of the packages I use daily. A major one being pyenv, a tool I use for building and managing various versions of the Python programming language. After upgrading, I tried building Python 3.8.6 with pyenv only to receive the following error messages.</p>
+	</p>
+</header><div class="newframe">
+    			<main>
+  <h1> Building Python on MacOS Big Sur</h1>
+  <p><time> November 18, 2020</time><p>
+ <p>Early last week, I broke my five-year rule of not upgrading to a newly released version of macOS until after two minor dot releases for the first time. As with every new operating system upgrade, this new update broke many of the packages I use daily. A major one being pyenv, a tool I use for building and managing various versions of the Python programming language. After upgrading, I tried building Python 3.8.6 with pyenv only to receive the following error messages.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">➜ pyenv install 3.8.6
 python-build: use openssl@1.1 from homebrew
 python-build: use readline from homebrew
@@ -96,21 +79,9 @@ issues in the future.</p>
 </code></pre></div><p>After the above command exits successfully, execute the following command to build Python with pyenv.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">➜ CFLAGS=&#34;-I$(brew --prefix openssl)/include -I$(brew --prefix bzip2)/include -I$(brew --prefix readline)/include -I$(xcrun --show-sdk-path)/usr/include&#34; LDFLAGS=&#34;-L$(brew --prefix openssl)/lib -L$(brew --prefix readline)/lib -L$(brew --prefix zlib)/lib -L$(brew --prefix bzip2)/lib&#34; CPPFLAGS=&#34;-I/usr/local/opt/bzip2/include&#34; pyenv install 3.8.6
 </code></pre></div>
-		</section>
 
-		<div class="post-tags">
-			
-			
-			
-		</div>
-	</article>
-</main>
-<footer>
-<hr>❤️
-	2020  retornam.com   
-</footer>
-
-
-</div>
+    			</main>
+    		</div></div>
+        
     </body>
 </html>
