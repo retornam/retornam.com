@@ -1,89 +1,55 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  
   <url>
     <loc>http://retornam.com/2020/11/building-python-on-macos-big-sur/</loc>
     <lastmod>2020-11-18T09:06:03-08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>http://retornam.com/posts/</loc>
     <lastmod>2020-11-18T09:06:03-08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>http://retornam.com/</loc>
     <lastmod>2020-07-09T13:19:15-07:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>http://retornam.com/about/</loc>
     <lastmod>2020-07-09T13:19:15-07:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>http://retornam.com/2020/07/reversing-pinned-android-certificates/</loc>
     <lastmod>2020-07-07T17:49:13-07:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>http://retornam.com/2019/11/view-routing-table-on-os-x-and-linux/</loc>
     <lastmod>2019-11-29T19:18:39-08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>http://retornam.com/2019/10/shell-file-test-operators/</loc>
     <lastmod>2019-10-26T10:32:57-07:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>http://retornam.com/2019/08/git-ls-files/</loc>
     <lastmod>2019-08-03T13:54:09-07:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>http://retornam.com/2019/07/sublime-text-regex-tips/</loc>
     <lastmod>2019-07-19T18:49:03-07:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>http://retornam.com/2019/07/hellofax-print-workaround/</loc>
     <lastmod>2019-07-17T10:32:44-07:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>http://retornam.com/2019/07/install-python-3.7-from-source/</loc>
     <lastmod>2019-07-11T10:31:49-07:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>http://retornam.com/tags/python/</loc>
     <lastmod>2019-07-11T10:31:49-07:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>http://retornam.com/tags/</loc>
     <lastmod>2019-07-11T10:31:49-07:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>http://retornam.com/2019/07/bypass-chrome-https-certificate-errors/</loc>
     <lastmod>2019-07-10T10:31:59-07:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>http://retornam.com/2019/06/brew-bundle/</loc>
     <lastmod>2019-06-14T02:01:10-07:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>http://retornam.com/2018/11/brew-cleanup/</loc>
     <lastmod>2018-11-23T13:25:06-07:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>http://retornam.com/categories/</loc>
   </url>
-  
 </urlset>
