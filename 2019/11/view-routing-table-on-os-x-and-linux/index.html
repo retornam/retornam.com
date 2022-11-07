@@ -44,28 +44,28 @@ show numerical addresses instead of trying to determine symbolic host names. Thi
  <p>On Linux, the <strong>route</strong> command shows and manipulates the IP routing
 table. To view the full route table, use the command <strong>route -n</strong>.The <strong>-n</strong> flag
 according to the man pages:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">show numerical addresses instead of trying to determine symbolic
-host names. This is useful if you are trying to determine why the
-route to your nameserver has vanished.
-</code></pre></div><p>In much simpler language, the <strong>-n</strong> flag resolves IP addresses to their hostnames.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>show numerical addresses instead of trying to determine symbolic
+</span></span><span style="display:flex;"><span>host names. This is useful if you are trying to determine why the
+</span></span><span style="display:flex;"><span>route to your nameserver has vanished.
+</span></span></code></pre></div><p>In much simpler language, the <strong>-n</strong> flag resolves IP addresses to their hostnames.</p>
 <p>For example the destination <strong>default</strong> displays <strong>0.0.0.0</strong> if you pass the
 <strong>-n</strong> flag and <strong>default</strong> without it.</p>
 <p>OS X on the other hand has the <strong>route</strong> command but can only manually manipulate
 the routing tables and doesn&rsquo;t show the table like on Linux.For this reason,
 I often use the <strong>netstat</strong> command instead and prefer <strong>netstat -nr</strong></p>
 <p>The <strong>-n</strong> flag on OS X according to the man page:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">shows network addresses as numbers (normally netstat interprets addresses and
-attempts to display them symbolically).  
-This option may be used with any of the display formats
-</code></pre></div><p>The <strong>r</strong> flag according to the man page:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">show the routing tables.  Use with -a to show protocol-cloned routes.  
-When -s is also present, show routing statistics instead.  
-When -l is also present, netstat assumes more columns are there and the
-maximum transmission unit.  More detailed information about the route metrics 
-are displayed with -ll for TCP round trip times -lll for all metrics.  
-Use the -z flags to display only entries with non-zero RTT values.  (&#39;&#39;mtu&#39;&#39;) 
-are also displayed.
-</code></pre></div><p>As always, it is good to spend time reading the man pages to understand the flags
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>shows network addresses as numbers (normally netstat interprets addresses and
+</span></span><span style="display:flex;"><span>attempts to display them symbolically).  
+</span></span><span style="display:flex;"><span>This option may be used with any of the display formats
+</span></span></code></pre></div><p>The <strong>r</strong> flag according to the man page:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>show the routing tables.  Use with -a to show protocol-cloned routes.  
+</span></span><span style="display:flex;"><span>When -s is also present, show routing statistics instead.  
+</span></span><span style="display:flex;"><span>When -l is also present, netstat assumes more columns are there and the
+</span></span><span style="display:flex;"><span>maximum transmission unit.  More detailed information about the route metrics 
+</span></span><span style="display:flex;"><span>are displayed with -ll for TCP round trip times -lll for all metrics.  
+</span></span><span style="display:flex;"><span>Use the -z flags to display only entries with non-zero RTT values.  (&#39;&#39;mtu&#39;&#39;) 
+</span></span><span style="display:flex;"><span>are also displayed.
+</span></span></code></pre></div><p>As always, it is good to spend time reading the man pages to understand the flags
 available for each command and how to use them properly.</p>
 <p>Hope this helps</p>
 

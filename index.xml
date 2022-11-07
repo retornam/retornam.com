@@ -54,7 +54,7 @@ show numerical addresses instead of trying to determine symbolic host names. Thi
       
       <guid>http://retornam.com/2019/10/shell-file-test-operators/</guid>
       <description>I&amp;rsquo;ve been writing some shell scripts recently and I&amp;rsquo;ve always had to Google which file test operator to use and when to use them. To prevent constant Googling, I&amp;rsquo;m writing these down here for easier reference in the future.
- ! not -a FILENAME - True if the FILENAME exists, identical to -e but deprecated. Use -e instead. -b FILENAME - True if the FILENAME exists and is a block device.</description>
+! not -a FILENAME - True if the FILENAME exists, identical to -e but deprecated. Use -e instead. -b FILENAME - True if the FILENAME exists and is a block device. -c FILENAME - True if the FILENAME exists and is a character device.</description>
     </item>
     
     <item>

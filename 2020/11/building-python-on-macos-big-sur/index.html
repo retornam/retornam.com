@@ -39,47 +39,47 @@
   <h1> Building Python on MacOS Big Sur</h1>
   <p><time> November 18, 2020</time><p>
  <p>Early last week, I broke my five-year rule of not upgrading to a newly released version of macOS until after two minor dot releases for the first time. As with every new operating system upgrade, this new update broke many of the packages I use daily. A major one being pyenv, a tool I use for building and managing various versions of the Python programming language. After upgrading, I tried building Python 3.8.6 with pyenv only to receive the following error messages.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">➜ pyenv install 3.8.6
-python-build: use openssl@1.1 from homebrew
-python-build: use readline from homebrew
-Downloading Python-3.8.6.tar.xz...
--&gt; https://www.python.org/ftp/python/3.8.6/Python-3.8.6.tar.xz
-Installing Python-3.8.6...
-python-build: use readline from homebrew
-
-import pip._internal
-  File &#34;&lt;frozen zipimport&gt;&#34;, line 241, in load_module
-  File &#34;&lt;frozen zipimport&gt;&#34;, line 709, in _get_module_code
-  File &#34;&lt;frozen zipimport&gt;&#34;, line 570, in _get_data
-BUILD FAILED (OS X 11.0.1 using python-build 20180424)
-zipimport.ZipImportError: can&#39;t decompress data; zlib not available
-</code></pre></div><p>Even though I had updated to the latest versions of both XCode and XCode command-line tools, pyenv&rsquo;s python-build process was unable to locate the header files for zlib.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>➜ pyenv install 3.8.6
+</span></span><span style="display:flex;"><span>python-build: use openssl@1.1 from homebrew
+</span></span><span style="display:flex;"><span>python-build: use readline from homebrew
+</span></span><span style="display:flex;"><span>Downloading Python-3.8.6.tar.xz...
+</span></span><span style="display:flex;"><span>-&gt; https://www.python.org/ftp/python/3.8.6/Python-3.8.6.tar.xz
+</span></span><span style="display:flex;"><span>Installing Python-3.8.6...
+</span></span><span style="display:flex;"><span>python-build: use readline from homebrew
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>import pip._internal
+</span></span><span style="display:flex;"><span>  File &#34;&lt;frozen zipimport&gt;&#34;, line 241, in load_module
+</span></span><span style="display:flex;"><span>  File &#34;&lt;frozen zipimport&gt;&#34;, line 709, in _get_module_code
+</span></span><span style="display:flex;"><span>  File &#34;&lt;frozen zipimport&gt;&#34;, line 570, in _get_data
+</span></span><span style="display:flex;"><span>BUILD FAILED (OS X 11.0.1 using python-build 20180424)
+</span></span><span style="display:flex;"><span>zipimport.ZipImportError: can&#39;t decompress data; zlib not available
+</span></span></code></pre></div><p>Even though I had updated to the latest versions of both XCode and XCode command-line tools, pyenv&rsquo;s python-build process was unable to locate the header files for zlib.</p>
 <p>Next, I tried exporting the path to the header files using the CFLAGS and LDFLAGS environment variables</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">➜ CFLAGS=&#34;-I$(xcrun --show-sdk-path)/usr/include&#34; LDFLAGS=&#34; -L$(xcrun --show-sdk-path)/usr/lib&#34; pyenv install 3.8.6
-python-build: use openssl@1.1 from homebrew
-python-build: use readline from homebrew
-Downloading Python-3.8.6.tar.xz...
--&gt; https://www.python.org/ftp/python/3.8.6/Python-3.8.6.tar.xz
-Installing Python-3.8.6...
-python-build: use readline from homebrew
-python-build: use zlib from xcode sdk
-
-
-import pip._internal
-  File &#34;&lt;frozen zipimport&gt;&#34;, line 241, in load_module
-  File &#34;&lt;frozen zipimport&gt;&#34;, line 709, in _get_module_code
-  File &#34;&lt;frozen zipimport&gt;&#34;, line 570, in _get_data
-BUILD FAILED (OS X 11.0.1 using python-build 20180424)
-zipimport.ZipImportError: can&#39;t decompress data; zlib not available
-</code></pre></div><p>Even with the added exports, the build was unable to locate zlib files. I decided to skip using the zlib files provided
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>➜ CFLAGS=&#34;-I$(xcrun --show-sdk-path)/usr/include&#34; LDFLAGS=&#34; -L$(xcrun --show-sdk-path)/usr/lib&#34; pyenv install 3.8.6
+</span></span><span style="display:flex;"><span>python-build: use openssl@1.1 from homebrew
+</span></span><span style="display:flex;"><span>python-build: use readline from homebrew
+</span></span><span style="display:flex;"><span>Downloading Python-3.8.6.tar.xz...
+</span></span><span style="display:flex;"><span>-&gt; https://www.python.org/ftp/python/3.8.6/Python-3.8.6.tar.xz
+</span></span><span style="display:flex;"><span>Installing Python-3.8.6...
+</span></span><span style="display:flex;"><span>python-build: use readline from homebrew
+</span></span><span style="display:flex;"><span>python-build: use zlib from xcode sdk
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>import pip._internal
+</span></span><span style="display:flex;"><span>  File &#34;&lt;frozen zipimport&gt;&#34;, line 241, in load_module
+</span></span><span style="display:flex;"><span>  File &#34;&lt;frozen zipimport&gt;&#34;, line 709, in _get_module_code
+</span></span><span style="display:flex;"><span>  File &#34;&lt;frozen zipimport&gt;&#34;, line 570, in _get_data
+</span></span><span style="display:flex;"><span>BUILD FAILED (OS X 11.0.1 using python-build 20180424)
+</span></span><span style="display:flex;"><span>zipimport.ZipImportError: can&#39;t decompress data; zlib not available
+</span></span></code></pre></div><p>Even with the added exports, the build was unable to locate zlib files. I decided to skip using the zlib files provided
 by XCode next, by installing zlib using Homebew and then exporting the new
 path to LDFLAGS, CFLAGS, and CPPFLAGS before issuing the build command.</p>
 <p>If this is your first time using <a href="https://brew.sh">Homebrew</a>, follow the prompts to install openssl, sqlite, readline, bzip2, and zlib as kegs. Do not link the packages to your /usr/local or /usr/local/opt directories as this could cause potential
 issues in the future.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">➜ brew install openssl sqlite readline bzip2 zlib
-</code></pre></div><p>After the above command exits successfully, execute the following command to build Python with pyenv.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">➜ CFLAGS=&#34;-I$(brew --prefix openssl)/include -I$(brew --prefix bzip2)/include -I$(brew --prefix readline)/include -I$(xcrun --show-sdk-path)/usr/include&#34; LDFLAGS=&#34;-L$(brew --prefix openssl)/lib -L$(brew --prefix readline)/lib -L$(brew --prefix zlib)/lib -L$(brew --prefix bzip2)/lib&#34; CPPFLAGS=&#34;-I/usr/local/opt/bzip2/include&#34; pyenv install 3.8.6
-</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>➜ brew install openssl sqlite readline bzip2 zlib
+</span></span></code></pre></div><p>After the above command exits successfully, execute the following command to build Python with pyenv.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>➜ CFLAGS=&#34;-I$(brew --prefix openssl)/include -I$(brew --prefix bzip2)/include -I$(brew --prefix readline)/include -I$(xcrun --show-sdk-path)/usr/include&#34; LDFLAGS=&#34;-L$(brew --prefix openssl)/lib -L$(brew --prefix readline)/lib -L$(brew --prefix zlib)/lib -L$(brew --prefix bzip2)/lib&#34; CPPFLAGS=&#34;-I/usr/local/opt/bzip2/include&#34; pyenv install 3.8.6
+</span></span></code></pre></div>
 
     			</main>
     		</div></div>
