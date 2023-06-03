@@ -7,4 +7,5 @@ _site
 node_modules
 vendor
 themes/archie/*
+themes/archie
 .hugo_build.lock
