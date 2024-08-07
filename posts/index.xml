@@ -4,126 +4,87 @@
     <title>Posts on Raymond Etornam</title>
     <link>http://retornam.com/posts/</link>
     <description>Recent content in Posts on Raymond Etornam</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-us</language>
     <copyright>retornam.com</copyright>
-    <lastBuildDate>Wed, 18 Nov 2020 09:06:03 -0800</lastBuildDate><atom:link href="http://retornam.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 18 Nov 2020 09:06:03 -0800</lastBuildDate>
+    <atom:link href="http://retornam.com/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Building Python on MacOS Big Sur</title>
       <link>http://retornam.com/2020/11/building-python-on-macos-big-sur/</link>
       <pubDate>Wed, 18 Nov 2020 09:06:03 -0800</pubDate>
-      
       <guid>http://retornam.com/2020/11/building-python-on-macos-big-sur/</guid>
       <description>Early last week, I broke my five-year rule of not upgrading to a newly released version of macOS until after two minor dot releases for the first time. As with every new operating system upgrade, this new update broke many of the packages I use daily. A major one being pyenv, a tool I use for building and managing various versions of the Python programming language. After upgrading, I tried building Python 3.</description>
     </item>
-    
     <item>
       <title>Reversing Pinned Android Certificates</title>
       <link>http://retornam.com/2020/07/reversing-pinned-android-certificates/</link>
       <pubDate>Tue, 07 Jul 2020 17:49:13 -0700</pubDate>
-      
       <guid>http://retornam.com/2020/07/reversing-pinned-android-certificates/</guid>
-      <description>A couple of days ago, I wanted to see all the requests a new app I had installed was making. After firing up mitmproxy to proxy requests coming in from my android device, I quickly realized that the application in question had implemented SSL certificate pinning.
-Many applications implement certificate pinning as an extra security layer to protect their users from man-in-the-middle attacks. Certificate pinning allows app developers to specify a list of certificates and ertificate authorities as valid thus bypassing Android&amp;rsquo;s default certificate store for validation.</description>
+      <description>A couple of days ago, I wanted to see all the requests a new app I had installed was making. After firing up mitmproxy to proxy requests coming in from my android device, I quickly realized that the application in question had implemented SSL certificate pinning.&#xA;Many applications implement certificate pinning as an extra security layer to protect their users from man-in-the-middle attacks. Certificate pinning allows app developers to specify a list of certificates and ertificate authorities as valid thus bypassing Android&amp;rsquo;s default certificate store for validation.</description>
     </item>
-    
     <item>
       <title>View Routing Table on OS X and Linux</title>
       <link>http://retornam.com/2019/11/view-routing-table-on-os-x-and-linux/</link>
       <pubDate>Fri, 29 Nov 2019 19:18:39 -0800</pubDate>
-      
       <guid>http://retornam.com/2019/11/view-routing-table-on-os-x-and-linux/</guid>
-      <description>On Linux, the route command shows and manipulates the IP routing table. To view the full route table, use the command route -n.The -n flag according to the man pages:
-show numerical addresses instead of trying to determine symbolic host names. This is useful if you are trying to determine why the route to your nameserver has vanished. In much simpler language, the -n flag resolves IP addresses to their hostnames.</description>
+      <description>On Linux, the route command shows and manipulates the IP routing table. To view the full route table, use the command route -n.The -n flag according to the man pages:&#xA;show numerical addresses instead of trying to determine symbolic host names. This is useful if you are trying to determine why the route to your nameserver has vanished. In much simpler language, the -n flag resolves IP addresses to their hostnames.</description>
     </item>
-    
     <item>
       <title>Shell File Test Operators</title>
       <link>http://retornam.com/2019/10/shell-file-test-operators/</link>
       <pubDate>Sat, 26 Oct 2019 10:32:57 -0700</pubDate>
-      
       <guid>http://retornam.com/2019/10/shell-file-test-operators/</guid>
-      <description>I&amp;rsquo;ve been writing some shell scripts recently and I&amp;rsquo;ve always had to Google which file test operator to use and when to use them. To prevent constant Googling, I&amp;rsquo;m writing these down here for easier reference in the future.
-! not -a FILENAME - True if the FILENAME exists, identical to -e but deprecated. Use -e instead. -b FILENAME - True if the FILENAME exists and is a block device. -c FILENAME - True if the FILENAME exists and is a character device.</description>
+      <description>I&amp;rsquo;ve been writing some shell scripts recently and I&amp;rsquo;ve always had to Google which file test operator to use and when to use them. To prevent constant Googling, I&amp;rsquo;m writing these down here for easier reference in the future.&#xA;! not -a FILENAME - True if the FILENAME exists, identical to -e but deprecated. Use -e instead. -b FILENAME - True if the FILENAME exists and is a block device. -c FILENAME - True if the FILENAME exists and is a character device.</description>
     </item>
-    
     <item>
       <title>Git ls-files</title>
       <link>http://retornam.com/2019/08/git-ls-files/</link>
       <pubDate>Sat, 03 Aug 2019 13:54:09 -0700</pubDate>
-      
       <guid>http://retornam.com/2019/08/git-ls-files/</guid>
-      <description>If you ever make the mistake of directly removing a long list of files and folders in a git repository with rm instead of git rm, you can save yourself from having to individually removing each file/folder referenced in git using the command
-git ls-files --deleted | xargs git rm According to the man page, the flag ls-files &amp;ndash;deleted outputs all recently deleted files.
-I wrote this down to serve as a reminder to myself.</description>
+      <description>If you ever make the mistake of directly removing a long list of files and folders in a git repository with rm instead of git rm, you can save yourself from having to individually removing each file/folder referenced in git using the command&#xA;git ls-files --deleted | xargs git rm According to the man page, the flag ls-files &amp;ndash;deleted outputs all recently deleted files.&#xA;I wrote this down to serve as a reminder to myself.</description>
     </item>
-    
     <item>
       <title>Sublime Text Regex Tips</title>
       <link>http://retornam.com/2019/07/sublime-text-regex-tips/</link>
       <pubDate>Fri, 19 Jul 2019 18:49:03 -0700</pubDate>
-      
       <guid>http://retornam.com/2019/07/sublime-text-regex-tips/</guid>
-      <description>I sometimes have to replace the nth character of a large text file with another character, an example being a badly formatted csv file. For example, if I want to replace the 7th character of each line in a file with a comma, using Sublime Text
-Find:	^(.{7})(.) Replace: \1, Remember to enable /Re in the Sublime Find Replace dialog. The same task can be performed with sed
-sed &amp;#39;s/./,/7&amp;#39; filename &amp;gt; newfilename </description>
+      <description>I sometimes have to replace the nth character of a large text file with another character, an example being a badly formatted csv file. For example, if I want to replace the 7th character of each line in a file with a comma, using Sublime Text&#xA;Find:&#x9;^(.{7})(.) Replace: \1, Remember to enable /Re in the Sublime Find Replace dialog. The same task can be performed with sed&#xA;sed &amp;#39;s/./,/7&amp;#39; filename &amp;gt; newfilename </description>
     </item>
-    
     <item>
       <title>Hellofax Print Workaround</title>
       <link>http://retornam.com/2019/07/hellofax-print-workaround/</link>
       <pubDate>Wed, 17 Jul 2019 10:32:44 -0700</pubDate>
-      
       <guid>http://retornam.com/2019/07/hellofax-print-workaround/</guid>
-      <description>I received a link to an official document that required my signature via email last week. Unlike most people, I print out and read every legsal document by line, highlighting the parts I do not understand and only sign them after I&amp;rsquo;ve understood everything in the document.
-The document was hosted on a web-service called Hellofax. Hellofax doesn&amp;rsquo;t provide a way to print out or export the document before signing, this workflow doesn&amp;rsquo;t work for people like me who carefully examine every legal document.</description>
+      <description>I received a link to an official document that required my signature via email last week. Unlike most people, I print out and read every legsal document by line, highlighting the parts I do not understand and only sign them after I&amp;rsquo;ve understood everything in the document.&#xA;The document was hosted on a web-service called Hellofax. Hellofax doesn&amp;rsquo;t provide a way to print out or export the document before signing, this workflow doesn&amp;rsquo;t work for people like me who carefully examine every legal document.</description>
     </item>
-    
     <item>
       <title>Install Python 3.7 From Source</title>
       <link>http://retornam.com/2019/07/install-python-3.7-from-source/</link>
       <pubDate>Thu, 11 Jul 2019 10:31:49 -0700</pubDate>
-      
       <guid>http://retornam.com/2019/07/install-python-3.7-from-source/</guid>
-      <description>Below are the the steps to install Python-3.7.4 from source on Debian based Linux operating systems.
-First, install the following base packages.
-sudo apt-get update sudo apt-get install \ build-essential \ libffi-dev \ libgdbm-dev \ libncurses5-dev \ libnss3-dev \ libreadline-dev \ libssl-dev \ wget \ curl Next download the latest tarball from Python.org [source download page] with curl
-cd /tmp/ curl -O https://www.python.org/ftp/python/3.7.4/Python-3.7.4.tar.xz Extract the tarball:
-tar -xvf Python-3.7.4.tar.xz Change directory to the newly created Python-3.</description>
+      <description>Below are the the steps to install Python-3.7.4 from source on Debian based Linux operating systems.&#xA;First, install the following base packages.&#xA;sudo apt-get update sudo apt-get install \ build-essential \ libffi-dev \ libgdbm-dev \ libncurses5-dev \ libnss3-dev \ libreadline-dev \ libssl-dev \ wget \ curl Next download the latest tarball from Python.org [source download page] with curl&#xA;cd /tmp/ curl -O https://www.python.org/ftp/python/3.7.4/Python-3.7.4.tar.xz Extract the tarball:&#xA;tar -xvf Python-3.7.4.tar.xz Change directory to the newly created Python-3.</description>
     </item>
-    
     <item>
       <title>Bypass Chrome HTTPS Certificate Errors</title>
       <link>http://retornam.com/2019/07/bypass-chrome-https-certificate-errors/</link>
       <pubDate>Wed, 10 Jul 2019 10:31:59 -0700</pubDate>
-      
       <guid>http://retornam.com/2019/07/bypass-chrome-https-certificate-errors/</guid>
-      <description>Chrome often throws certificate errors for local development sites with self-signed HTTPS certificates. As of this writing, the way to get around this is to type thisisunsafe when the error appears. The Chrome team sometimes updates this bypass, when that happens, visit the Chrome codebase looking for the base64 encoded BYPASS_SEQUENCE.
-Decode it using the following command, replacing BYPASS_SEQUENCE with the text you copied from the code.
-echo BYPASS_SEQUENCE | base64 --decode </description>
+      <description>Chrome often throws certificate errors for local development sites with self-signed HTTPS certificates. As of this writing, the way to get around this is to type thisisunsafe when the error appears. The Chrome team sometimes updates this bypass, when that happens, visit the Chrome codebase looking for the base64 encoded BYPASS_SEQUENCE.&#xA;Decode it using the following command, replacing BYPASS_SEQUENCE with the text you copied from the code.&#xA;echo BYPASS_SEQUENCE | base64 --decode </description>
     </item>
-    
     <item>
       <title>Brew Bundle</title>
       <link>http://retornam.com/2019/06/brew-bundle/</link>
       <pubDate>Fri, 14 Jun 2019 02:01:10 -0700</pubDate>
-      
       <guid>http://retornam.com/2019/06/brew-bundle/</guid>
-      <description>I recently discovered the brew bundle tap. This tap saves all your installed homebrew packages to a file. This makes it easy to version control your installed packages or make a list easy list of packages to share with others.
-Install the Homebrew bundle tap, to activate the brew bundle command
-brew tap Homebrew/bundle To dump all your installed packages to a Brewfile run
-brew bundle dump The dump command creates a Brewfile in the current working directory with all packages installed by Homebrew as entries.</description>
+      <description>I recently discovered the brew bundle tap. This tap saves all your installed homebrew packages to a file. This makes it easy to version control your installed packages or make a list easy list of packages to share with others.&#xA;Install the Homebrew bundle tap, to activate the brew bundle command&#xA;brew tap Homebrew/bundle To dump all your installed packages to a Brewfile run&#xA;brew bundle dump The dump command creates a Brewfile in the current working directory with all packages installed by Homebrew as entries.</description>
     </item>
-    
     <item>
       <title>Brew Cleanup</title>
       <link>http://retornam.com/2018/11/brew-cleanup/</link>
       <pubDate>Fri, 23 Nov 2018 13:25:06 -0700</pubDate>
-      
       <guid>http://retornam.com/2018/11/brew-cleanup/</guid>
-      <description>For users looking to recover some much needed disk space on MacOS after years of installing and upgrading brew packages, I have some good news for you. Homebrew comes with a command to periodically cleanup unused resources.
-brew cleanup --dry-run -s The cleanup dry-run command shows you the location of files/folders that homebrew think sis safe to remove. It also returns an approximation of the total disk space that will be freed after the files are removed.</description>
+      <description>For users looking to recover some much needed disk space on MacOS after years of installing and upgrading brew packages, I have some good news for you. Homebrew comes with a command to periodically cleanup unused resources.&#xA;brew cleanup --dry-run -s The cleanup dry-run command shows you the location of files/folders that homebrew think sis safe to remove. It also returns an approximation of the total disk space that will be freed after the files are removed.</description>
     </item>
-    
   </channel>
 </rss>

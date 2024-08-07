@@ -4,8 +4,9 @@
     <title>Categories on Raymond Etornam</title>
     <link>http://retornam.com/categories/</link>
     <description>Recent content in Categories on Raymond Etornam</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <copyright>retornam.com</copyright><atom:link href="http://retornam.com/categories/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>retornam.com</copyright>
+    <atom:link href="http://retornam.com/categories/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
