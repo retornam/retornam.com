@@ -7,8 +7,10 @@ Copyright = "retornam.com"
 pygmentsstyle = "monokai"
 pygmentscodefences = true
 pygmentscodefencesguesssyntax = true
-paginate=10 # articles per page
+#paginate=10 # articles per page
 
+[pagination]
+  pagerSize = 10
 
 [[menu.main]]
   name = "Archives"
