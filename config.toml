@@ -37,7 +37,7 @@ pygmentscodefencesguesssyntax = true
   posts = "/:year/:month/:title"
 
 [taxonomies]
-  category = "categories"
+#  category = "categories"
   tag = "tags"
 
 [markup]
@@ -55,3 +55,8 @@ pygmentscodefencesguesssyntax = true
 [author]
   name = "retornam"
 
+[sitemap]
+  changeFreq = ''
+  disable = false
+  filename = 'sitemap.xml'
+  priority = -1
