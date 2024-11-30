@@ -5,13 +5,16 @@ draft: false
 ---
 
 
-Raymond Etornam Agbeame is a Ghanaian computer programmer.
-He studied Computer Science at KNUST in Kumasi, Ghana.
-Professionally, he has worked in the San Francisco Bay Area
-for the Mozilla Corporation the now defunct company Rocketfuel Inc, 
-CollectiveHealth Inc and Domino Data Lab.
+Raymond Etornam Agbeame is a skilled Ghanaian born computer programmer with a
+strong educational background. He holds a Master’s degree in Cybersecurity from
+the Georgia Institute of Technology (Atlanta, GA) and a Bachelor’s degree in
+Computer Science from the Kwame Nkrumah University of Science and Technology
+(Kumasi, Ghana).
+
+Professionally, Raymond has gained experience in the San Francisco Bay Area,
+working with notable companies such as Mozilla Corporation, CollectiveHealth,
+Domino Data Lab, and the now-defunct Rocketfuel Inc.
 
 
-He can be found on Twitter as the handle @retornam.
 
 
