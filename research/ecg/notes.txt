@@ -1,0 +1,4 @@
+https://shyftpowersupport.zendesk.com/hc/en-us/articles/13419555219357-How-to-Reconnect-A-Meter
+https://drive.google.com/drive/folders/1u-3X-iadzzi0eHhS3nvGuTNDuPd4MuDL?usp=drive_link
+metertoolomnipower.msi tool.msi
+Kamstrup-USB-Driver_5098893_C1.exe usbdriver.exe
