@@ -1,0 +1,2 @@
+tool.msi filter=lfs diff=lfs merge=lfs -text
+usbdriver.exe filter=lfs diff=lfs merge=lfs -text
